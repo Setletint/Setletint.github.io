@@ -1,0 +1,42 @@
+body{
+    margin: 0px;
+    background-color: wheat;
+}
+a{
+    color: black;
+}
+.top-annotation{
+    border-bottom: solid 2px black;
+    background-color: #345995;
+    width: auto;
+    margin: 0;
+    height: 24px;
+    text-align: right;
+}
+.bottom-annotation{
+    position: absolute;
+    bottom: 0px;
+}
+.name{
+    padding-right: 0.3rem;
+    color:white;
+    font-size: 16pt;
+}
+.container{
+    justify-content: center;
+}
+.main-info{
+    background-color: #EAC435;
+    border: solid black 1px;
+    box-shadow: black 5px 5px;
+    margin: 0 auto;
+    border-radius: 4px;
+    margin-top: 5vh;
+    width: 70vw;
+    height: auto;
+}
+.info-1{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24pt;
+}
