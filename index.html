@@ -5,43 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" />
-    <title>Setletint</title>
+    <title>Setletint's page</title>
+    <link rel="icon" type="image/x-icon" href="/images/github-mark.svg">
 </head>
 
 <body>
-    <div class="main">
-        <div style="display:flex;">
-            <div style="display:flex; text-align: left;">
+    <div class="container">
+        <div class="top-row">
+            <div class="left">
+                <h1 class="name">Setletint</h1>
+                <p>Software Developer</p>
+            </div>
+            <div class="right">
                 <img class="profilePic" src="https://avatars.githubusercontent.com/u/72040591?v=4" height="100" />
             </div>
-            <h1 class="name">Setletint</h1>
         </div>
-        <div style="margin-top:10lvh;">
-            <h2 style="display: inline; padding-left:2pt;">Links:</h2>
-            <div style="margin-left: 20px;">
-                <div style="margin-top: 25px; align-items:center;">
-                    <a href="https://github.com/Setletint" style=" text-decoration:none; color:inherit;"
-                        target="_blank">
-                        <img src="images/github-mark.svg" height="22px" style="display: inline;">
-                        <p style="display: inline; font-size:16pt; vertical-align: top;">GitHub</p>
-                    </a>
-                </div>
-                <div style="margin-top: 9px; align-items:center;">
-                    <a href="https://www.youtube.com/channel/UCBtToClUcnWBU5xU9FtjjRQ"
-                        style=" text-decoration:none; color:inherit;" target="_blank">
-                        <p style="display: inline; color:rgb(156, 0, 0); font-weight:bold; vertical-align:sub;">YT</p>
-                        <p style="display: inline; font-size:16pt; vertical-align: top;">YouTube</p>
-                    </a>
-                </div>
-                <div style="margin-top: 9px; align-items:center;">
-                    <a href="https://hashnode.com/@Setletint" style=" text-decoration:none; color:inherit;" target="_blank">
-                        <img src="images/hashnode-brand-icon.png" height="22px" style="display: inline;">
-                        <p style="display: inline; font-size:16pt; vertical-align: top;">Hashnode</p>
-                    </a>
-                </div>
-            </div>
-        </div>
+        <hr class="separator">
+        <h2>Social Links</h2>
+        <ul class="social-list">
+            <li><a href="https://github.com/Setletint" target="_blank"><span><img src="images/github-mark.svg"></span>
+                    GitHub</a></li>
+            <li><a href="https://www.youtube.com/@setletint" target="_blank"><span><img
+                            src="images/youtube_social_icon_dark.png"></span> YouTube</a></li>
+            <li><a href="https://discord.com/users/467353545272721420" target="_blank"><span><img
+                            src="images/Discord-Symbol-Black.svg"></span> Discord</a></li>
+        </ul>
+
     </div>
 </body>
+
+<script>
+    function setFaviconBasedOnTheme() {
+        const darkIcon = "/images/github-mark.svg";
+        const lightIcon = "/images/github-mark-white.svg";
+        const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+        const link = document.querySelector("link[rel~='icon']") || document.createElement('link');
+        link.rel = "icon";
+        link.type = "image/svg+xml";
+        link.href = isDarkMode ? lightIcon : darkIcon;
+
+        document.head.appendChild(link);
+    }
+
+    setFaviconBasedOnTheme();
+
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", setFaviconBasedOnTheme);
+</script>
 
 </html>
